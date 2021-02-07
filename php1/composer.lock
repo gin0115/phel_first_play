@@ -1,0 +1,255 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "b13f123122272d420560e348f11337c0",
+    "packages": [
+        {
+            "name": "mabasic/phel-json",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/mabasic/phel-json.git",
+                "reference": "9ea45f5743540aa8f7bb61d5b00b33c03eadc53f"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/mabasic/phel-json/zipball/9ea45f5743540aa8f7bb61d5b00b33c03eadc53f",
+                "reference": "9ea45f5743540aa8f7bb61d5b00b33c03eadc53f",
+                "shasum": ""
+            },
+            "require": {
+                "phel-lang/phel-lang": "dev-master"
+            },
+            "type": "library",
+            "extra": {
+                "phel": {
+                    "loader": {
+                        "mabasic\\json\\": "src/"
+                    },
+                    "loader-dev": {
+                        "mabasic\\json\\tests\\": "tests/"
+                    },
+                    "tests": [
+                        "tests/"
+                    ]
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Mario Bašić",
+                    "email": "mario@laravelista.hr",
+                    "homepage": "https://mariobasic.com"
+                }
+            ],
+            "description": "Library for converting Phel datastructures to and from JSON.",
+            "keywords": [
+                "json",
+                "phel",
+                "php"
+            ],
+            "funding": [
+                {
+                    "url": "https://www.patreon.com/laravelista",
+                    "type": "patreon"
+                }
+            ],
+            "time": "2021-01-29T23:49:14+00:00"
+        },
+        {
+            "name": "phel-lang/phel-composer-plugin",
+            "version": "v0.1.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phel-lang/phel-composer-plugin.git",
+                "reference": "9e3af8cfe854ddfae04934c26877a5b989ca7156"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phel-lang/phel-composer-plugin/zipball/9e3af8cfe854ddfae04934c26877a5b989ca7156",
+                "reference": "9e3af8cfe854ddfae04934c26877a5b989ca7156",
+                "shasum": ""
+            },
+            "require": {
+                "composer-plugin-api": "^1.1.0 || ^2.0",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "composer/composer": "^1.10.0",
+                "friendsofphp/php-cs-fixer": "^2.16",
+                "phpunit/phpunit": "^9",
+                "vimeo/psalm": "^3.11"
+            },
+            "type": "composer-plugin",
+            "extra": {
+                "class": "Phel\\Composer\\Plugin"
+            },
+            "autoload": {
+                "psr-4": {
+                    "Phel\\Composer\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Haase",
+                    "email": "je.haase@gmail.com"
+                }
+            ],
+            "description": "A composer plugin for the Phel language.",
+            "homepage": "https://phel-lang.org/",
+            "keywords": [
+                "composer",
+                "functional",
+                "language",
+                "lisp",
+                "phel",
+                "plugin"
+            ],
+            "time": "2021-01-17T20:38:50+00:00"
+        },
+        {
+            "name": "phel-lang/phel-lang",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/phel-lang/phel-lang.git",
+                "reference": "c77a68a780fdcfa66c941365df318ec3814f5599"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/phel-lang/phel-lang/zipball/c77a68a780fdcfa66c941365df318ec3814f5599",
+                "reference": "c77a68a780fdcfa66c941365df318ec3814f5599",
+                "shasum": ""
+            },
+            "require": {
+                "phel-lang/phel-composer-plugin": "^0.1",
+                "php": ">=7.4"
+            },
+            "require-dev": {
+                "ext-readline": "*",
+                "friendsofphp/php-cs-fixer": "^2.18",
+                "infection/infection": "^0.21",
+                "phpmetrics/phpmetrics": "^2.7",
+                "phpunit/phpunit": "^9.5",
+                "symfony/var-dumper": "^5.2",
+                "vimeo/psalm": "dev-master"
+            },
+            "bin": [
+                "phel"
+            ],
+            "type": "library",
+            "extra": {
+                "phel": {
+                    "loader": {
+                        "phel\\": "src/phel/"
+                    },
+                    "loader-dev": {
+                        "phel\\": "tests/phel/"
+                    },
+                    "tests": [
+                        "tests/phel/"
+                    ]
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Phel\\": "src/php/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jens Haase",
+                    "email": "je.haase@gmail.com"
+                }
+            ],
+            "description": "Phel is a functional programming language that compiles to PHP",
+            "homepage": "https://phel-lang.org/",
+            "keywords": [
+                "functional",
+                "language",
+                "lisp",
+                "phel"
+            ],
+            "time": "2021-02-05T12:09:41+00:00"
+        }
+    ],
+    "packages-dev": [
+        {
+            "name": "fzaninotto/faker",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/fzaninotto/Faker.git",
+                "reference": "5ffe7db6c80f441f150fc88008d64e64af66634b"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/fzaninotto/Faker/zipball/5ffe7db6c80f441f150fc88008d64e64af66634b",
+                "reference": "5ffe7db6c80f441f150fc88008d64e64af66634b",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.3.3 || ^7.0 || ^8.0"
+            },
+            "require-dev": {
+                "ext-intl": "*",
+                "phpunit/phpunit": "^4.8.35 || ^5.7",
+                "squizlabs/php_codesniffer": "^2.9.2"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.9-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Faker\\": "src/Faker/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "François Zaninotto"
+                }
+            ],
+            "description": "Faker is a PHP library that generates fake data for you.",
+            "keywords": [
+                "data",
+                "faker",
+                "fixtures"
+            ],
+            "abandoned": true,
+            "time": "2020-12-11T09:59:14+00:00"
+        }
+    ],
+    "aliases": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "fzaninotto/faker": 20
+    },
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {
+        "ext-readline": "*"
+    },
+    "platform-dev": [],
+    "plugin-api-version": "1.1.0"
+}

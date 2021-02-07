@@ -1,0 +1,28 @@
+{
+  "name": "gin0115/phel",
+  "keywords": ["phel","lisp","functional","language"],
+  "homepage": "https://phel-lang.org/",
+  "license": "MIT",
+  "require": {
+    "ext-readline": "*",
+    "phel-lang/phel-lang": "*",
+    "mabasic/phel-json": "*"
+  },
+  "minimum-stability": "dev",
+  "extra": {
+    "phel": {
+      "loader": {
+        "gin0115\\": "src/"
+      },
+      "loader-dev": {
+        "gin0115-tests\\": "tests/"
+      },
+      "tests": [
+          "tests/"
+      ]
+    }
+  },
+  "require-dev": {
+    "fzaninotto/faker": "^1.9@dev"
+  }
+}
