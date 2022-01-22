@@ -2,8 +2,7 @@
   (:require phel\html :refer [html doctype])
   (:require gin0115\string\string)
   (:require gin0115\address\address :refer [addressesPrint addressesHeader printAddressRow])
-  (:require phel\test :refer [deftest is])
-  )
+  (:require phel\test :refer [deftest is]))
 
 #(println (string/split "AppleA" 2))
 (println "-------------")
@@ -11,7 +10,7 @@
 (println "-------------")
 (println (string/chunk "AppleA" 2 "-"))
 (println "-------------")
-(println (string/chunk "AppleA" 2 ))
+(println (string/chunk "AppleA" 2))
 (println "-------------")
 (println ["Ap" "pl" "eA"])
 (println (:1 {:0 "Ap" :1 "pl" :2 "eA"}))
@@ -33,7 +32,7 @@
 
 (def content
   [:div @{:class "flex-center position-ref full-height"}
-   [:div @{:class "content"} ]])
+   [:div @{:class "content"}]])
 
 # (print
 #  (html

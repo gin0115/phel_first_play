@@ -2,34 +2,27 @@
   (:require mabasic\json\json :refer [decode])
   (:require phel\html :refer [html doctype]))
 
-(defn- userProvider [] 
-    (json/decode 
-        (php/file_get_contents "/shared/httpd/phel/htdocs/php1/users.json")
-    )
-)
+(defn- userProvider []
+  (json/decode
+   (php/file_get_contents "/shared/httpd/phel/htdocs/php1/users.json")))
 (defn printAddressRow [a]
-     [:div @{:class "address pure-g"}
-        [:div @{:class "pure-u-2-24"} (get a :id)]
-        [:div @{:class "pure-u-4-24"} (get a :name)]
-        [:div @{:class "pure-u-10-24"} (get a :address)]
-        [:div @{:class "pure-u-4-24"} (get a :email)]
-        [:div @{:class "pure-u-4-24"} (get a :phoneNumber)]
-    ]
-)
+  [:div @{:class "address pure-g"}
+   [:div @{:class "pure-u-2-24"} (get a :id)]
+   [:div @{:class "pure-u-4-24"} (get a :name)]
+   [:div @{:class "pure-u-10-24"} (get a :address)]
+   [:div @{:class "pure-u-4-24"} (get a :email)]
+   [:div @{:class "pure-u-4-24"} (get a :phoneNumber)]])
 
 (defn addressesHeader []
-    [:div @{:class "header pure-g"}
-        [:div @{:class "pure-u-2-24"} "#ID"]
-        [:div @{:class "pure-u-4-24"} "Name"]
-        [:div @{:class "pure-u-10-24"} "Address"]
-        [:div @{:class "pure-u-4-24"} "Email"]
-        [:div @{:class "pure-u-4-24"} "Phone"]
-    ]
-)
+  [:div @{:class "header pure-g"}
+   [:div @{:class "pure-u-2-24"} "#ID"]
+   [:div @{:class "pure-u-4-24"} "Name"]
+   [:div @{:class "pure-u-10-24"} "Address"]
+   [:div @{:class "pure-u-4-24"} "Email"]
+   [:div @{:class "pure-u-4-24"} "Phone"]])
 
 (defn addressesPrint []
-    (map printAddressRow  (userProvider))
-)
+  (map printAddressRow  (userProvider)))
 
 
 
