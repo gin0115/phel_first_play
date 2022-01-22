@@ -4,6 +4,7 @@
   "homepage": "https://phel-lang.org/",
   "license": "MIT",
   "require": {
+    "php": ">=7.4",
     "ext-readline": "*",
     "phel-lang/phel-lang": "^0.5",
     "mabasic/phel-json": "*"

@@ -1,19 +1,9 @@
-(ns gin0115\string\string
-  (:use \Exception))
+(ns gin0115\string\string-test
+  (:require gin0115\string\string :refer [slice])
+  (:require phel\test :refer [deftest is]))
 
-# Str -> Str -> Str
-(defn addCSlashes [string characters]
-  (php/addcslashes string characters))
+(deftest test-slice
+  (is (= "pleA" (string/slice "AppleA" 2)))
+  (is (= "pl" (string/slice "AppleA" 2 2))))
 
-(defn slice [string start & finish]
-  (apply php/substr string start finish))
-
-(defn replace [find replace subject]
-  (php/str_replace find replace subject))
-
-# TODO: Tables doesn't exists anymore. Use hash-map instead.
-#(defn split [string length]
-##    (php-array-to-table (php/str_split string length))
-
-(defn chunk [string length & separator]
-  (apply php/chunk_split string length separator))
+# TODO: Add tests for the other functions...

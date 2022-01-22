@@ -5,7 +5,7 @@
   (:require phel\test :refer [deftest is])
   )
 
-(println (string/split "AppleA" 2))
+#(println (string/split "AppleA" 2))
 (println "-------------")
 (println (string/slice "AppleA" 2 2))
 (println "-------------")
@@ -13,13 +13,13 @@
 (println "-------------")
 (println (string/chunk "AppleA" 2 ))
 (println "-------------")
-(println @["Ap" "pl" "eA"])
-(println (get :1(table :0 "Ap" :1 "pl" :2 "eA")))
-(println (get :1(string/split "AppleA" 2)))
+(println ["Ap" "pl" "eA"])
+(println (:1 {:0 "Ap" :1 "pl" :2 "eA"}))
+# (println (:1 (string/split "AppleA" 2)))
 # (println (set (string/split "AppleA" 2)))
 
-(deftest test-split
-  (is (= (table :0 "Ap" :1 "pl" :2 "eA") (string/split "AppleA" 2))))
+#(deftest test-split
+#  (is (= (hash-map :0 "Ap" :1 "pl" :2 "eA") (string/split "AppleA" 2))))
 
 
 
