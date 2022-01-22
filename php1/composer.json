@@ -5,24 +5,16 @@
   "license": "MIT",
   "require": {
     "ext-readline": "*",
-    "phel-lang/phel-lang": "*",
+    "phel-lang/phel-lang": "^0.5",
     "mabasic/phel-json": "*"
   },
-  "minimum-stability": "dev",
-  "extra": {
-    "phel": {
-      "loader": {
-        "gin0115\\": "src/"
-      },
-      "loader-dev": {
-        "gin0115-tests\\": "tests/"
-      },
-      "tests": [
-          "tests/"
-      ]
-    }
-  },
   "require-dev": {
+    "roave/security-advisories": "dev-latest",
     "fzaninotto/faker": "^1.9@dev"
+  },
+  "config": {
+    "allow-plugins": {
+      "phel-lang/phel-composer-plugin": true
+    }
   }
 }
