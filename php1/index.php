@@ -2,10 +2,14 @@
 
 declare(strict_types=1);
 
-$runtime = require __DIR__ . '/vendor/PhelRuntime.php';
+use Phel\Phel;
 
-$runtime->loadNs('gin0115\views\main');
+$projectRootDir = __DIR__ . '/';
 
+require $projectRootDir . 'vendor/autoload.php';
+
+// This is the entry point of your phel app
+Phel::run($projectRootDir, 'gin0115\views\main');
 
 // Generates the JSON
 // include __DIR__ . '/vendor/autoload.php';

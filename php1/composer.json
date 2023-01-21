@@ -4,25 +4,12 @@
   "homepage": "https://phel-lang.org/",
   "license": "MIT",
   "require": {
+    "php": ">=8.0",
     "ext-readline": "*",
-    "phel-lang/phel-lang": "*",
-    "mabasic/phel-json": "*"
-  },
-  "minimum-stability": "dev",
-  "extra": {
-    "phel": {
-      "loader": {
-        "gin0115\\": "src/"
-      },
-      "loader-dev": {
-        "gin0115-tests\\": "tests/"
-      },
-      "tests": [
-          "tests/"
-      ]
-    }
+    "phel-lang/phel-lang": "^0.8"
   },
   "require-dev": {
+    "roave/security-advisories": "dev-latest",
     "fzaninotto/faker": "^1.9@dev"
   }
 }

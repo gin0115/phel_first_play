@@ -1,0 +1,9 @@
+(ns gin0115\string\string-test
+  (:require gin0115\string\string :refer [slice])
+  (:require phel\test :refer [deftest is]))
+
+(deftest test-slice
+  (is (= "pleA" (string/slice "AppleA" 2)))
+  (is (= "pl" (string/slice "AppleA" 2 2))))
+
+# TODO: Add tests for the other functions...

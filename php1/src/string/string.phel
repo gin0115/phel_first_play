@@ -1,24 +1,19 @@
 (ns gin0115\string\string
-    (:use \Exception))
+  (:use \Exception))
 
 # Str -> Str -> Str
 (defn addCSlashes [string characters]
-    (php/addcslashes string characters)
-)
+  (php/addcslashes string characters))
 
 (defn slice [string start & finish]
-    (apply php/substr string start finish)
-)
+  (apply php/substr string start finish))
 
 (defn replace [find replace subject]
-    (php/str_replace find replace subject)
-)
+  (php/str_replace find replace subject))
 
-(defn split [string length]
-    "Splits a stirng into a table based on char length. Uses str_split() "
-    (php-array-to-table(php/str_split string length))
-)
+# TODO: Tables doesn't exists anymore. Use hash-map instead.
+#(defn split [string length]
+##    (php-array-to-table (php/str_split string length))
 
 (defn chunk [string length & separator]
-    (apply php/chunk_split string length separator)
-)
+  (apply php/chunk_split string length separator))
