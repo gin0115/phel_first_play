@@ -24,15 +24,15 @@
 
 (def head
   [:head
-   [:meta @{:charset "utf-8"}]
-   [:link @{:rel "stylesheet" :href "https://unpkg.com/purecss@2.0.5/build/pure-min.css"}]
-   [:meta @{:name "viewport" :content "width=device-width, initial-scale=1"}]
+   [:meta {:charset "utf-8"}]
+   [:link {:rel "stylesheet" :href "https://unpkg.com/purecss@2.0.5/build/pure-min.css"}]
+   [:meta {:name "viewport" :content "width=device-width, initial-scale=1"}]
    [:title "Contacts from JSON"]])
 
 
 (def content
-  [:div @{:class "flex-center position-ref full-height"}
-   [:div @{:class "content"}]])
+  [:div {:class "flex-center position-ref full-height"}
+   [:div {:class "content"}]])
 
 # (print
 #  (html

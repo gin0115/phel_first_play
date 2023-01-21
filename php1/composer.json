@@ -4,18 +4,12 @@
   "homepage": "https://phel-lang.org/",
   "license": "MIT",
   "require": {
-    "php": ">=7.4",
+    "php": ">=8.0",
     "ext-readline": "*",
-    "phel-lang/phel-lang": "^0.5",
-    "mabasic/phel-json": "*"
+    "phel-lang/phel-lang": "^0.8"
   },
   "require-dev": {
     "roave/security-advisories": "dev-latest",
     "fzaninotto/faker": "^1.9@dev"
-  },
-  "config": {
-    "allow-plugins": {
-      "phel-lang/phel-composer-plugin": true
-    }
   }
 }
